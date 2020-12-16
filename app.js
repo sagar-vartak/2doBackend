@@ -41,6 +41,10 @@ mongoose.connect(
   }
 );
 
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
+
 app.listen(4000, () => {
   console.log(`Listeninig on Port 4000`);
 });

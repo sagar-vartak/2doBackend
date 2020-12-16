@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+var http = require("http");
 const Task = require("./models/taskSchema");
 const User = require("./models/userSchema");
 dotenv.config({ path: "./config.env" });
@@ -45,8 +46,10 @@ app.get("/", (req, res) => {
   res.send("Welcome");
 });
 
-var port_number = server.listen(process.env.PORT || 4000);
-
-app.listen(port_number, () => {
-  console.log(`Listeninig on Port 4000`);
+app.listen(process.env.PORT || 3000, function () {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
 });

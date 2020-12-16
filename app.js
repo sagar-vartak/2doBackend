@@ -45,6 +45,8 @@ app.get("/", (req, res) => {
   res.send("Welcome");
 });
 
-app.listen(4000, () => {
+var port_number = server.listen(process.env.PORT || 4000);
+
+app.listen(port_number, () => {
   console.log(`Listeninig on Port 4000`);
 });

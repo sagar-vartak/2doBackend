@@ -26,5 +26,11 @@
     "mongoose": "^5.11.7",
     "swig": "^1.4.2",
     "uniqid": "^5.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagar-vartak/2doBackend.git"
+  },
+  "homepage": "https://github.com/sagar-vartak/2doBackend#readme"
 }

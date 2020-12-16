@@ -23,7 +23,7 @@ app.use("/deletetasks", deleteTask);
 app.use("/addtask", addTask);
 
 mongoose.connect(
-  process.env.DATABASE_URL,
+  process.env.MONGO_URL || process.env.DATABASE_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err, connection) => {
     if (err) {

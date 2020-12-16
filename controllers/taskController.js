@@ -11,7 +11,7 @@ const addTask = async (req, res) => {
   try {
     let adTask = await Task.insertMany({ taskName: "NEW TASK" });
     console.log(adTask);
-    res.send("ADDED task sucessFully", adTask);
+    res.send(adTask);
   } catch (err) {
     console.log(err);
   }
